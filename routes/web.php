@@ -25,6 +25,8 @@ Route::get('/', function () {
 Route::get('/test', MyTest::class);
 Route::get('pdf', [PDFController::class,'index']);
 
+Route::view('myPDF');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
